@@ -1,0 +1,192 @@
+@import url("main.css");
+
+/* GRID */
+.container-routine {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 27fr 27fr 3fr;
+
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main parent"
+    "main main main parent"
+    "footer footer footer footer";
+
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  grid-area: nav;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#parent {
+  grid-area: parent;
+}
+
+main {
+  padding-left: 42px; /* Add padding to the left side to match home*/
+  padding-right: 230px; /* Add padding to the left side to match home*/
+  grid-area: main;
+}
+
+/* BREADCRUMBS */
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  padding-left: 0%;
+  list-style: none;
+}
+
+/* Display li side by side */
+ul.breadcrumb li {
+  display: inline;
+  padding-left: 0%;
+}
+
+/* Adding '>' before each li */
+ul.breadcrumb li+li:before {
+  padding: 5px;
+  content: ">";
+}
+
+/* Links & Hovers */
+ul.breadcrumb li a {
+  color: #aa336a;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #673147;
+  text-decoration: underline;
+}
+
+/* IMAGES */
+
+.image-routine {
+  display: block; /* ensures that the image takes up the full width of its container 
+                     and allows the overlay effect to cover the entire image */
+  width: 100%;
+  height: auto;
+}
+
+.overlay-routine {
+  position: absolute; /* position the overlay element relative to its parent element */
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: 0.5s ease; /* ease -> type of transition */
+  opacity: 0;
+  color: white;
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-image:hover .overlay-routine {
+  opacity: 1;
+}
+
+/* BUTTONS */
+/* Style */
+.button, .buttonFF, .buttonBack, .buttonBackM {
+  font-size: 18px;
+  background-color: #fcaab7;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* so you can click it lol */
+}
+
+/* Span */
+.button span, 
+.buttonFF span, 
+.buttonBack span,
+.buttonBackM span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Span After */
+.button span:after,
+.buttonFF span:after,
+.buttonBack span:after,
+.buttonBackM span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+/* Hover Span After */
+.button:hover span:after,
+.buttonFF:hover span:after,
+.buttonBack:hover span:after,
+.buttonBackM:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* BUTTON FORWARD */
+.button span:after {
+  content: '>';
+  right: -20px;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+
+/* BUTTON FORWARD FORWARD */
+
+.buttonFF span:after {
+  content: '>>';
+  right: -20px;
+}
+.buttonFF:hover span {
+  padding-right: 35px;
+}
+
+/* BUTTON BACKWARD (Routine)*/
+
+.buttonBack span:after {
+  content: '<';
+  left: -125px;
+}
+.buttonBack:hover span {
+  padding-left: 25px;
+}
+
+/* BUTTON BACKWARD (Morning)*/
+
+.buttonBackM span:after {
+  content: '<';
+  left: -145px;
+}
+.buttonBackM:hover span {
+  padding-left: 25px;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 550) {
+  .container-routine {
+    grid-template-rows: 1fr 0.7fr 15fr 15fr 15fr 3px;
+
+    grid-template-areas:
+      "nav"
+      "parent"
+      "main"
+      "main"
+      "main"
+      "footer";
+  }
+  
+}

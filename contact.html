@@ -1,0 +1,147 @@
+<!-- CONTACT: CONTACT DETAILS -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="4styling/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script scr="3scripting/contact.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <div class="container-contact">
+      <nav>
+        <a href="1home.html" class="name title">april</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
+        <a href="routine.html">Personal Routine</a>
+        <a href="recs.html">Recommendations</a>
+      </nav>
+
+      <div
+        id="leavesBanner"
+        style="
+          background-image: url(2media/leavesBanner.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        "
+      ></div>
+
+      <!-- Text -->
+      <main style="text-align: center">
+        <h1>Contact</h1>
+        <p>Want to reach out to me or ask a question directly?</p>
+        <p>Use this contact form or email me at</p>
+        <p class="email">april.pabalan@ucdconnect.ie</p>
+
+        <!-- Drop Down Box (Options for Reasons) -->
+        <label for="options">Reason</label>
+        <br />
+
+        <!-- Wrapped in form to customize in CSS -->
+        <form class="contact-form">
+          <!-- Wrapped in select for drop down option box -->
+          <select name="options" id="options">
+            <option value="nothing" selected></option>
+            <!-- Default option is blank -->
+            <option value="skincare-concern">Skincare Concern</option>
+            <option value="personal-routine">Personal Routine Questions</option>
+            <option value="trending">Suggestion for What's Trending</option>
+            <option value="technical-bug">Technical Bug</option>
+            <option value="other">Other</option>
+          </select>
+        </form>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" action="thanks.html">
+          <!-- action is an attribute that will redirect the user after
+          the send button is pressed to thanks.html -->
+
+          <p>Contact Form</p>
+          <!-- 1. NAME INPUT -->
+          <!-- type = browser validates it as what it is text/email-->
+          <!-- Placeholder is an attribute for the description of the input field, 
+            the text that is visible when the input field is empty. 
+            In our case enter the value "Name" -->
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            name="name"
+            required
+          />
+
+          <!-- 2. EMAIL INPUT -->
+          <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            name="email"
+            required
+          />
+
+          <!-- 3. MESSAGE INPUT -->
+          <textarea
+            placeholder="Message"
+            id="message"
+            name="message"
+            required
+          ></textarea>
+
+          <!-- 4. SEND BUTTON -->
+          <button type="submit" class="submit-button">Send</button>
+        </form>
+        <br />
+        <p>
+          You can also contact me on my social media platforms that are listed
+          as icons in the footer below.
+        </p>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="row">
+          <div class="column left">
+            <p style="margin-left: 30px">April Pabalan</p>
+            <p style="margin-left: 30px">Co. Kildare</p>
+            <p style="margin-left: 30px">Ireland</p>
+          </div>
+
+          <div class="column middle">
+            <p style="text-align: center">
+              <a
+                href="https://www.facebook.com/april.pabalan.3/"
+                class="fa fa-facebook"
+                style="font-size: 50px; float: left"
+              ></a>
+              <a
+                href="https://www.instagram.com/aprildnpbln_/"
+                class="fa fa-instagram"
+                style="font-size: 50px"
+              ></a>
+              <a
+                href="https://twitter.com/rilapnlb_"
+                class="fa fa-twitter"
+                style="font-size: 50px; float: right"
+              ></a>
+            </p>
+          </div>
+
+          <div class="column right">
+            <p
+              class="april"
+              style="font-size: larger; float: right; margin-right: 30px"
+            >
+              <a href="1home.html" style="text-decoration: none">april</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

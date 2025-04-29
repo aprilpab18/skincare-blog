@@ -1,0 +1,51 @@
+@import url("main.css");
+
+/* GRID */
+.container-about {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 2.2fr 47fr 3fr;
+
+  grid-template-areas:
+  "nav nav nav nav"
+  "leavesBanner leavesBanner leavesBanner leavesBanner"
+  "main main main main"
+  "footer footer footer footer";
+
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#leavesBanner {
+  grid-area: leavesBanner;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+
+/* MEDIA */
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-rows: 0.1fr 0.15fr 5fr 5fr 5fr 5fr 0.3fr;
+
+    grid-template-areas:
+      "nav"
+      "leavesBanner"
+      "main"
+      "main"
+      "main"
+      "main"
+      "footer";
+  }
+}

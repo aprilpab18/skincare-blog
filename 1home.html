@@ -1,0 +1,106 @@
+<!-- MAIN: HOME PAGE -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="4styling/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="1home.html" class="name">april</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="routine.html">Personal Routine</a>
+        <a href="recs.html">Recommendations</a>
+      </nav>
+
+      <!-- BANNER -->
+
+      <div
+        id="leavesBanner"
+        style="
+          background-image: url(2media/leavesBanner.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        "
+      ></div>
+
+      <!-- MAIN WELCOME -->
+
+      <main>
+        <h1 style="text-align: center">april</h1>
+        <p style="text-align: center">
+          Welcome to <span class="april">april</span>, the ultimate website for all things skincare!
+        </p>
+        <p style="text-align: center; padding-left: 15%; padding-right: 15%">
+          Whether you're just starting out with a simple routine or looking to dive deeper into 
+          the world of skincare, I hope this website can be a valuable resource for you. 
+          Let's embark on this journey towards healthy, glowing skin together!</p>
+
+          <div class="line"></div>
+      </main>
+
+      <!-- IMAGE SLIDER -->
+
+      <div id="Content">
+        <h2 style="text-align: center;">What's Trending</h2>
+        <p class="text">Below are products that are trending at the moment whether they have gained prominence on TikTok or other social media platforms.</p>
+        <div id="slider">
+          <div class="img-box">
+            <img
+              src="2slides_media/cleansingoil.jpeg"
+              alt="trending-products"
+              class="slider-img"
+            />
+            <!-- TEXT -->
+            <div class="overlay-trending">
+              <p>KOSE SOFTYMO Speedy Cleansing Oil: A Japanese cleansing oil known to be very quick at removing makeup and other impurities.</p>
+            </div>
+
+          </div>
+          <!-- BUTTONS -->
+          <button class="prev" onclick="prev()">&#65124</button>
+          <button class="next" onclick="next()">&#65125</button>
+        </div>
+        
+
+      </div>
+      <!-- SCRIPTING FOR SLIDER -->
+      <script src="3scripting/slideshow.js"></script>
+
+      <!-- FOOTER -->
+
+      <footer>
+        <div class="row">
+          <div class="column left">
+            <p style="margin-left: 30px;">April Pabalan</p>
+            <p style="margin-left: 30px;">Co. Kildare</p>
+            <p style="margin-left: 30px;">Ireland</p>
+          </div>
+
+          <div class="column middle">
+            <p style="text-align: center;">
+              <a href="https://www.facebook.com/april.pabalan.3/" class="fa fa-facebook" style="font-size: 50px; float: left;"></a>
+              <a href="https://www.instagram.com/aprildnpbln_/" class="fa fa-instagram" style="font-size: 50px"></a>
+              <a href="https://twitter.com/rilapnlb_" class="fa fa-twitter" style="font-size: 50px; float: right;"></a>
+              
+            </p>
+          </div>
+
+          <div class="column right">
+            <p class="april" style="font-size: larger; float: right; margin-right: 30px;">
+              <a href="1home.html" style="text-decoration: none;">april</a>
+            </p>
+          </div>
+
+        </div>
+      </footer>
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+@import url("routine.css");
+
+/* GRID AREA */
+.container-morning {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 54fr 53fr 3fr;
+
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main parent"
+    "main main main parent"
+    "footer footer footer footer";
+
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#parent {
+  grid-area: parent;
+}
+
+/* IMAGES - Morning Page*/
+.imageMRoutine {
+  display: block; /* ensures that the image takes up the full width of its container 
+                       and allows the overlay effect to cover the entire image */
+  height: auto;
+  width: 60%;
+}
+
+.overlay-MRoutine {
+  position: absolute; /* position the overlay element relative to its parent element */
+  bottom: 0; /* used after position to show where it will be*/
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  transition: 0.5s ease; /* ease -> type of transition */
+  opacity: 0;
+  color: white;
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+  width: 60%;
+}
+
+.container-image:hover .overlay-MRoutine,
+.container-image:hover .overlay-Window,
+.container-image:hover .overlay-snailEss,
+.container-image:hover .overlay-BYS {
+  /* shows when you hover over image */
+  opacity: 1;
+}
+
+/* Morning Window */
+
+.imageWindow {
+  width: 79%;
+  display: block;
+  height: auto;
+}
+
+.overlay-Window{
+  width: 79%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Skin BYS Cleanser (image was not the same as the general ones)*/
+
+.imageBYS {
+  width: 79.8%;
+  display: block;
+  height: auto;
+}
+
+.overlay-BYS{
+  width: 79.8%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Snail Mucin Essence (image was not the same as the general ones)*/
+
+.imageSnailEss {
+  width: 74.4%;
+  display: block;
+  height: auto;
+}
+
+.overlay-snailEss{
+  width: 74.4%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 19px;
+  padding: 20px;
+  text-align: center;
+}

@@ -1,0 +1,111 @@
+@import url("main.css");
+
+/* GRID LAYOUT */
+.container {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 2.2fr 6fr 14fr 3fr;
+
+  grid-template-areas:
+    "nav nav nav nav"
+    "leavesBanner leavesBanner leavesBanner leavesBanner"
+    "main main main main"
+    "Content Content Content Content"
+    "footer footer footer footer";
+
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#leavesBanner {
+  grid-area: leavesBanner;
+}
+
+.line {
+  grid-area: main;
+}
+
+#Content {
+  grid-area: Content;
+  background: #fbfaf5;
+}
+
+/* CLASSES */
+.text {
+  text-align: center;
+}
+
+/* IMAGE SLIDER */
+img {
+  /* Actual pics */
+  height: 581px;
+}
+
+#slider {
+  /* Photo-like Background */
+  width: 600px;
+  height: 600px;
+  margin: 80px auto;
+  position: relative;
+  border: 10px solid white;
+  box-shadow: 2px 2px 5px 2px #ccc;
+}
+
+button {
+  /* button for slide*/
+  padding: 10px;
+  border: none;
+  background: #fcaab7;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f1899b;
+}
+.next {
+  border-radius: 100px;
+  margin-left: 537px;
+}
+.prev {
+  border-radius: 100px;
+  margin-left: 10px;
+}
+
+/* OVERLAY TEXT */
+.overlay-trending {
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  width: 94%;
+  height: 18%;
+  text-align: center;
+  transition: 0.5s ease; /* ease -> type of transition */
+  background-color: rgba(0, 0, 0, 0.322);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+}
+
+.img-box:hover .overlay-trending {
+  opacity: 1;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-rows: 0.1fr 0.15fr 0.5fr 0.5fr 0.5fr 2fr 0.3fr;
+
+    grid-template-areas:
+      "nav"
+      "leavesBanner"
+      "main"
+      "main"
+      "main"
+      "Content"
+      "footer";
+  }
+}

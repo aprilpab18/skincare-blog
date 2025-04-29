@@ -1,0 +1,266 @@
+/* TEXT STYLING */
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color: #9c4c6d;
+}
+
+.april {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.extra {
+  font-style: italic;
+  color: #ce6b94;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.email {
+  font-style: italic;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 10%;
+}
+
+li {
+  margin-bottom: 11%;
+  list-style-type: "\2665"; /* Icon for hearts in unicode*/
+  padding-left: 5%;
+  white-space: nowrap; /* Prevent new line so words stay on the same line*/
+}
+
+/* HEADINGS */
+
+body {
+  margin: 0;
+  font-size: 19px;
+  color: #673147;
+}
+
+/* TOP NAVIGATION BAR */
+nav {
+  position: sticky;
+  /* stay in the same position on the viewport, 
+  regardless of scrolling, but only within their parent element */
+  top: 0;
+  overflow: hidden;
+  /* overflow: specifies whether to clip the content or to add scrollbars 
+       when the content of an element is too big to fit in the specified area. 
+       hidden: The overflow is clipped, and the rest of the content will be invisible*/
+  background-color: #ffb6c1;
+  grid-area: nav;
+  z-index: 4;
+  /* brings the nav to the front is there's content behind it */
+}
+
+nav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  height: 63px;
+  letter-spacing: 0.1px;
+  line-height: 40px;
+  padding: 14px 16px;
+  text-decoration: none; /* Puts an underlined line if not there */
+  font-size: 17px;
+}
+
+nav a.name {
+  /* Separate for name of website 'april' */
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-left: 30px;
+}
+
+nav a.name:hover {
+  /* No background colour for home/april title */
+  background-color: #ffb6c1;
+}
+
+nav a:hover {
+  background-color: #fcaab7;
+}
+
+nav a.active {
+  /* New background colour when clicked */
+  background-color: #faa0a0;
+}
+
+/* GRID */
+
+main {
+  background: #fbfaf5;
+  grid-area: main;
+}
+
+#parent {
+  /* used to wrap sidebar */
+  background: #fcaab7;
+  grid-area: parent;
+  padding-left: 20px;
+}
+
+#sidebar {
+  background: #fcaab7;
+  position: fixed;
+}
+
+/* FOOTER */
+
+footer {
+  background: #aa336a;
+  color: #fbfaf5;
+  grid-area: footer;
+}
+
+* {
+  box-sizing: border-box;
+  /* include the padding and border of an element in its total width and height. 
+     easier to position within layout */
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+.left {
+  width: 40%;
+}
+.right {
+  width: 40%;
+}
+.middle {
+  width: 20%;
+}
+
+/* Clear floats after the columns
+This ensures that any floating elements within the row 
+are properly contained within the row element. */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* IMAGES */
+.container-image {
+  position: relative; /* positions the overlay within container div */
+  width: fit-content; /* set width to fit content */
+  max-width: 100%; /* add max-width property */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 3.5%;
+  width: 90%;
+  height: 15%;
+  text-align: center;
+  transition: 0.5s ease; /* ease -> type of transition */
+  background-color: rgba(0, 0, 0, 0.322);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+}
+
+/* ICONS */
+
+.line {
+  height: 70px;
+  width: 150px;
+  margin: auto; /* puts it in the middle */
+  margin-bottom: 70px;
+  border-bottom: 3px solid #ce6b94;
+}
+
+.label {
+  /* used for labels */
+  position: relative;
+  font-size: 14px;
+  background-color: #fcaab7;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.label::after {
+  /* used to make the 'pointy' bit 
+  ::after is used to add content to an element without modifying its HTML*/
+  content: "";
+  position: absolute;
+  top: 27%;
+  right: -27px;
+  margin-top: -10px;
+  border-top: 10px solid transparent; /* building the shape */
+  border-bottom: 10px solid transparent; /* building the shape */
+  border-left: 10px solid #fcaab7; /* 'pointy' bit */
+  padding: 9px;
+}
+
+/* Social Media Icons */
+.fa {
+  padding: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none; /* gets rid of line */
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+
+/* LINKS */
+a {
+  color: white;
+}
+
+.link {
+  color: #aa336a;
+}
+
+.sidebar-link {
+  color: #aa336a;
+  text-decoration: none;
+}
+
+.list-link {
+  text-decoration: none;
+  color: #673147;
+}
+
+/* HOVERS FOR LINKS */
+.sidebar-link:hover,
+.list-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 550px) {
+  .column {
+    width: 100%;
+  }
+}

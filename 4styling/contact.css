@@ -1,0 +1,103 @@
+@import url("main.css");
+
+/* GRID AREA */
+.container-contact {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 2.2fr 14fr 3fr;
+
+  grid-template-areas:
+    "nav nav nav nav"
+    "leavesBanner leavesBanner leavesBanner leavesBanner"
+    "main main main main"
+    "footer footer footer footer";
+
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#leavesBanner {
+  grid-area: leavesBanner;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* CONTACT STUFF */
+
+/* Drop Down Box Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form select {
+  font-size: 18px;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  /* sets the element to be a block-level element, 
+  which means it takes up the full width available to it 
+  and starts on a new line. */
+
+  font-size: 18px;
+  width: 48.75%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  padding-bottom: 100px;
+  resize: none;
+  /* without resize, it puts an indicator in the corner 
+       where the user can resize? */
+}
+
+.contact-form button {
+  font-size: 18px;
+  background-color: #fcaab7;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* so you can click it lol */
+}
+
+.contact-form button:hover {
+  background-color: #fcaab7;
+}
+
+/* MEDIA */
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-rows: 0.1fr 0.15fr 1fr 0.3fr;
+
+    grid-template-areas:
+      "nav"
+      "leavesBanner"
+      "main"
+      "footer";
+  }
+}
